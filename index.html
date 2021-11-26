@@ -15,22 +15,40 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="root">
+        <!-- Inizio Main -->
         <main>
-        </main>
-        <aside>
-            <!-- <div class="arrows arrow-top">
-                <i class="fas fa-chevron-up"></i>
+            <div v-for="elem in elementi" class="main-item">
+                <img class="main-img" :src="elem.img" :alt="elem.titolo">
+                <div class="text">
+                    <span class="nazione">{{elem.titolo}}</span>
+                    <span class="descrizione">{{elem.testo}}</span>
+                </div>
             </div>
-            <div class="arrows arrow-bottom">
-                <i class="fas fa-chevron-down"></i>
-            </div> -->
+        </main>
+
+        <!-- Inizio Aside -->
+        <aside>
+            <!-- Img Aside -->
+            <div v-for="elem in elementi">
+                <img class="aside-img" :src="elem.img" :alt="elem.titolo">
+            </div>
+            <!-- Frecce -->
+            <div class="frecce">
+                <div class="arrows arrow-top">
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+                <div class="arrows arrow-bottom">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
         </aside>
+
     </div>
 
-    <!-- Script JS -->
-    <script src="js/script.js"></script>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
