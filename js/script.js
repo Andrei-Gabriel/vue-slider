@@ -27,12 +27,18 @@ const app = new Vue({
                 titolo: "Paradise",
                 testo: "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,"
             },
-        ]
+        ],
+        i: 0
     },
 
     // Inizio METODI
     methods: {
-
+        nextImg: function(){
+            this.i++;
+        },
+        prevImg: function(){
+            this.i--;
+        },
     },
 });
 

@@ -18,11 +18,11 @@
     <div class="container" id="root">
         <!-- Inizio Main -->
         <main>
-            <div v-for="elem in elementi" class="main-item">
-                <img class="main-img" :src="elem.img" :alt="elem.titolo">
+            <div class="main-item">
+                <img class="main-img" :src="elementi[i].img" :alt="elementi[i].titolo">
                 <div class="text">
-                    <span class="nazione">{{elem.titolo}}</span>
-                    <span class="descrizione">{{elem.testo}}</span>
+                    <span class="nazione">{{elementi[i].titolo}}</span>
+                    <span class="descrizione">{{elementi[i].testo}}</span>
                 </div>
             </div>
         </main>
@@ -35,10 +35,10 @@
             </div>
             <!-- Frecce -->
             <div class="frecce">
-                <div class="arrows arrow-top">
+                <div class="arrows arrow-top" @click="prevImg()">
                     <i class="fas fa-chevron-up"></i>
                 </div>
-                <div class="arrows arrow-bottom">
+                <div class="arrows arrow-bottom" @click="nextImg()">
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
