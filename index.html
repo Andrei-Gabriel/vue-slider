@@ -30,7 +30,7 @@
         <!-- Inizio Aside -->
         <aside>
             <!-- Img Aside -->
-            <div v-for="(elem, index) in elementi">
+            <div v-for="(elem, index) in elementi" @click="clickImg(index)">
                 <img class="aside-img" :src="elem.img" :alt="elem.titolo" :class="index == i ? 'selected' : ''">
             </div>
             <!-- Frecce -->

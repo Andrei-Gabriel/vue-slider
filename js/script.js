@@ -30,7 +30,6 @@ const app = new Vue({
         ],
         i: 0
     },
-
     // Inizio METODI
     methods: {
         nextImg: function(){
@@ -46,6 +45,9 @@ const app = new Vue({
             }else{
                 this.i--;
             }
+        },
+        clickImg: function(index){
+            this.i = index;
         },
     },
 });

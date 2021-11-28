@@ -73,6 +73,7 @@ aside {
         width: 100%;
         height: calc(100vh / 5);
         background-color: rgba(0, 0, 0, 1);
+        cursor: pointer;
     }
         .aside-img {
             display: block;
