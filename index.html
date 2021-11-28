@@ -30,8 +30,8 @@
         <!-- Inizio Aside -->
         <aside>
             <!-- Img Aside -->
-            <div v-for="(elem, index) in elementi" :class="index == i ? 'selected' : ''">
-                <img class="aside-img" :src="elem.img" :alt="elem.titolo">
+            <div v-for="(elem, index) in elementi">
+                <img class="aside-img" :src="elem.img" :alt="elem.titolo" :class="index == i ? 'selected' : ''">
             </div>
             <!-- Frecce -->
             <div class="frecce">
