@@ -34,10 +34,18 @@ const app = new Vue({
     // Inizio METODI
     methods: {
         nextImg: function(){
-            this.i++;
+            if(this.i == this.elementi.length - 1){
+                this.i = 0;
+            }else{
+                this.i++;
+            }
         },
         prevImg: function(){
-            this.i--;
+            if(this.i == 0){
+                this.i = 4;
+            }else{
+                this.i--;
+            }
         },
     },
 });
